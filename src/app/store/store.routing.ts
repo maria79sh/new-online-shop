@@ -8,6 +8,7 @@ const routes: Routes = [
     path: '',
     component: StoreRoutingComponent,
     children: [
+      { path: '', redirectTo: 'product-list', pathMatch: 'full' },
       {
         path: 'product-list',
         component: ProductListComponent,
