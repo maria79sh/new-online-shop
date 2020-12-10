@@ -1,3 +1,4 @@
+import { MatDividerModule } from '@angular/material/divider';
 import { StoreRoutingModule } from './store.routing';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -15,6 +16,6 @@ import { StoreRoutingComponent } from './components/store-routing/store-routing.
     StoreRoutingComponent,
   ],
 
-  imports: [CommonModule, MaterialModule, StoreRoutingModule],
+  imports: [CommonModule, MaterialModule, StoreRoutingModule, MatDividerModule],
 })
 export class StoreModule {}

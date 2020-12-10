@@ -7,17 +7,12 @@ const routes: Routes = [
     path: "",
     component: LayoutComponent,
     children: [
-      // { path: "", redirectTo: "/admin", pathMatch: "full" },
-      // {
-      //   path: "admin",
-      //   loadChildren: () =>
-      //     import("../admin/admin.module").then((m) => m.AdminModule),
-      // },
-      // {
-      //   path: "seller",
-      //   loadChildren: () =>
-      //     import("../seller/seller.module").then((m) => m.SellerModule),
-      // },
+      // { path: "", redirectTo: "/store", pathMatch: "full" },
+      {
+        path: "store",
+        loadChildren: () =>
+          import("../store/store.module").then((m) => m.StoreModule),
+      },
     ],
   },
 ];
