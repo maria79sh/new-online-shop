@@ -18,10 +18,6 @@ import { AdminModule } from './admin/admin.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    UserModule,
-    StoreModule,
-    AdminModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
