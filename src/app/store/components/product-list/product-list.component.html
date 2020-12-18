@@ -21,7 +21,7 @@
             style="max-height: 60px;width:80px;margin-left: 20%; margin-bottom: 5px;">
         </span>
         <mat-card-actions>
-            <button mat-raised-button color="accent" style="margin-left: 10px;margin-right: 5px;"> 
+            <button mat-raised-button color="accent" style="margin-left: 10px;margin-right: 5px;">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                  Add To Cart</button>
           </mat-card-actions>
@@ -29,34 +29,35 @@
   </div>
 </mat-card> -->
 
-<mat-card style="margin-left: 80px; margin-right: 80px;">
-  <div class="row" style="padding-left: 60px; padding-right: 20px;">
+<mat-card class="my-card">
+  <div class="row" id="div1">
       <a
         href="#"
         class="list-group-item clearfix"
         *ngFor="let product of products">
-        <mat-card style="background:white; width: 190px; height: 320px;">
+
+        <mat-card class="products">
             <mat-card-header>
-                <mat-card-title style="color:crimson; "><i class="fa fa-tag" aria-hidden="true"></i>
+                <mat-card-title class="card-title"><i class="fa fa-tag" aria-hidden="true"></i>
                      {{product.name}}</mat-card-title>
-                     <mat-card-subtitle style="color: darkcyan;"> price : {{product.price}} </mat-card-subtitle>
+                     <mat-card-subtitle class="card-subtitle"> price : {{product.price}} 
+                     </mat-card-subtitle>
                      <!-- <mat-card-subtitle style="color :dimgrey;"> info : {{product.description}} </mat-card-subtitle> -->
               </mat-card-header>
-              <h5 style="margin-left: 2px; color:grey;">Info :{{product.description}}</h5>
+
+              <h5 id="h5" >Info :{{product.description}}</h5>
         <span class="pull-right">
           <img
             [src]="product.imagePath"
             alt="{{ product.name }}"
-            class="img-responsive"
-            style="height: 90px;width:90px;margin-left: 20%; margin-bottom: 5px;margin-top: 10px;" >
+            class="img-responsive">
         </span>
         <mat-card-actions>
-            <button mat-raised-button color="accent" 
-            style="margin-left: 25px;margin-right: 5px; margin-top: 20px;"> 
+            <button mat-raised-button color="accent" id="addButton">
                 <i class="fa fa-cart-plus" aria-hidden="true"></i>
                  Add To Cart</button>
           </mat-card-actions>
         </mat-card>
       </a>
   </div>
-</mat-card> 
+</mat-card>

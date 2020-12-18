@@ -1,7 +1,6 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
     <div class="navbar-header">
-      <a routerLink="/" class="navbar-brand" 
-      style="color: aliceblue; font-weight: bold;">
+      <a id="a1" routerLink="/" class="navbar-brand">
        My Shop <i class="fa fa-shopping-bag" aria-hidden="true"></i> </a>
   </div>
   
@@ -27,17 +26,15 @@
       </li>
     </ul>
 
-    <form class="form-inline" action="/action_page.php" style="padding-left: 50px;">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" style="color: dimgrey;">
+    <form class="form-inline" action="/action_page.php" id="search-form">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" id="search">
         <button class="btn btn-outline-secondary" type="button">Search</button>
       </form>
 
-      <ul class="nav navbar-nav ml-auto" style="direction: rtl; text-align: right;">
+      <ul class="nav navbar-nav ml-auto" id="ulist">
         <li class="nav-item text-right">
-          <a class="nav-link" routerLink ="/shopping-cart"
-           style="color : white;border :2px inset white;padding: 10px 20px; 
-           font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-weight: bold;">
-            <i class="fa fa-shopping-cart" aria-hidden="true" style="color: crimson;"></i> Shopping Cart </a>
+          <a class="nav-link" routerLink ="/shopping-cart" id="cart">
+            <i class="fa fa-shopping-cart" aria-hidden="true" id="cart-button"></i> Shopping Cart </a>
         </li>
       </ul>
   </nav>

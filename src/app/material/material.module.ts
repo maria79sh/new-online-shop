@@ -1,11 +1,11 @@
-import { NgModule } from  '@angular/core';
- 
-import {MatButtonModule} from  '@angular/material/button';
-import {MatToolbarModule} from  '@angular/material/toolbar';
-import {MatFormFieldModule} from  '@angular/material/form-field';
-import {MatCardModule} from  '@angular/material/card';
-import {MatInputModule} from  '@angular/material/input';
-import {MatTooltipModule} from  '@angular/material/tooltip';
+import { NgModule } from '@angular/core';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -24,9 +24,8 @@ import { MatTreeModule } from '@angular/material/tree';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatGridListModule } from '@angular/material/grid-list';
 
-
 @NgModule({
-imports: [
+  imports: [
     MatButtonModule,
     MatToolbarModule,
     MatFormFieldModule,
@@ -34,34 +33,30 @@ imports: [
     MatInputModule,
     MatTooltipModule,
     MatAutocompleteModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatIconModule,
-  MatListModule,
-  MatPaginatorModule,
-  MatSelectModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
-  MatTabsModule,
-  MatButtonToggleModule,
-  MatTreeModule,
-  MatBadgeModule,
-  MatGridListModule,
-
-
-],
-exports: [MatButtonModule,
+    MatCheckboxModule,
+    MatChipsModule,
+    MatDividerModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatListModule,
+    MatPaginatorModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    MatSortModule,
+    MatTableModule,
+    MatTabsModule,
+    MatButtonToggleModule,
+    MatTreeModule,
+    MatBadgeModule,
+    MatGridListModule,
+  ],
+  exports: [
+    MatButtonModule,
     MatToolbarModule,
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
     MatTooltipModule,
-
-],
- 
+  ],
 })
- 
-export  class  MaterialModule { }
+export class MaterialModule {}
