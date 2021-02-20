@@ -7,6 +7,7 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { ProductItemComponent } from './components/product-list/product-item/product-item.component';
 import { StoreRoutingComponent } from './components/store-routing/store-routing.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,6 @@ import { StoreRoutingComponent } from './components/store-routing/store-routing.
     StoreRoutingComponent,
   ],
 
-  imports: [CommonModule, MaterialModule, StoreRoutingModule, MatDividerModule],
+  imports: [CommonModule, MaterialModule, StoreRoutingModule, MatDividerModule, MatCardModule],
 })
 export class StoreModule {}

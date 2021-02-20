@@ -62,12 +62,6 @@ export class ProductListComponent implements OnInit {
       'https://www.powerplanetonline.com/cdnassets/polaroid_now_negro_camara_instantanea_03_ad_l.jpg',
       120000
     ),
-    new Product(
-      'Camera',
-      'Digital',
-      'https://static.bhphoto.com/images/images1500x1500/1594281159_1573879.jpg',
-      120000
-    ),
   ];
 
   constructor() {}
