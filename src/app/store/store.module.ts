@@ -11,6 +11,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { StoreService } from './services/store.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const matModules = [
   MatCardModule,
@@ -28,6 +30,7 @@ const matModules = [
     StoreRoutingComponent,
   ],
 
-  imports: [...matModules, CommonModule, StoreRoutingModule],
+  imports: [...matModules, CommonModule, StoreRoutingModule, HttpClientModule],
+  providers: [StoreService],
 })
 export class StoreModule {}
