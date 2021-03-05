@@ -7,27 +7,29 @@ import { LoginComponent } from './components/login/login.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatInputModule } from '@angular/material/input';
-import {MatButtonModule} from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AuthService } from './services/auth.service';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 
-
+const matModules =[ 
+  MatCardModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatToolbarModule,
+  MatButtonModule,
+]
 @NgModule({
   declarations: [AuthRoutingComponent, RegisterComponent, LoginComponent],
 
   imports: [
+    ...matModules,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     AuthRoutingModule,
-    MatInputModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatToolbarModule,
-    MatButtonModule,
     HttpClientModule
+    
   ],
   providers: [AuthService]
 })
