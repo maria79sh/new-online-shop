@@ -1,24 +1,38 @@
-#a1{
-    color: aliceblue;
-     font-weight: bold;
+.home{
+    color: black;
 }
+#a1{
+    color: brown;
+      font-weight: bold;
+      font-size: larger;
+ }
+ #a2{
+     color: cornflowerblue;
+     font-size: small;
+ }
+ #a3{
+     color: cornflowerblue;
+ }
 #search-form{
     padding-left: 50px;
-}
-#search{
+ }
+ #search{
     color: dimgrey;
 }
-#ulist{
-    direction: rtl; 
-    text-align: right;
-}
-#cart{
-    color : sandybrown;
-    border :2px inset white;
-    padding: 10px 20px; 
+// #ulist{
+//     direction: rtl; 
+//     text-align: right;
+// }
+ #cart{
+     color : crimson;
+     padding-left: 260px; 
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-     font-weight: bold;
-}
-#cart-button{
-    color: crimson;
-}
+    font-weight: bold;
+ }
+ #cart-button{
+     color: crimson;
+ }
+
+ #store-icon{
+     size: 10px;
+ }

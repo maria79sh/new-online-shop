@@ -1,13 +1,18 @@
 export class Product {
-  public name: string;
-  public description: string;
-  public imagePath: string;
-  public price: number;
+  name: string;
+  description: string;
+  imageUrl: string;
+  price: number;
+  registerDate: number;
+  count: number;
 
-  constructor(name: string, desc: string, imagePath: string, price: number) {
+  constructor(name: string, desc: string, imageUrl: string, price: number,
+    registerDate: number, count: number) {
     this.name = name;
     this.description = desc;
-    this.imagePath = imagePath;
+    this.imageUrl = imageUrl;
     this.price = price;
+    this.registerDate = registerDate;
+    this.count = count;
   }
 }
