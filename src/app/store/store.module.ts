@@ -13,6 +13,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreService } from './services/store.service';
+import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 const matModules = [
   MatCardModule,
@@ -21,6 +24,8 @@ const matModules = [
   MatToolbarModule,
   MatButtonModule,
   MatDividerModule,
+  MatIconModule,
+  MatMenuModule
 ];
 @NgModule({
   declarations: [

@@ -8,14 +8,57 @@
         <table class="example-full-width" cellspacing="0">
           <tr>
             <td>
-              <mat-form-field class="example-full-width">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Enter Product Name</mat-label>
+                <input matInput placeholder="product name" required>
               </mat-form-field>
             </td>
           </tr>
+
           <tr>
-          <td><mat-form-field class="example-full-width">
-          </mat-form-field></td>
-        </tr></table>
+          <td>
+            <mat-form-field class="example-full-width" id="imgurl">
+              <mat-label>Product Image</mat-label>
+              <input matInput placeholder="Image Url" value="">
+            </mat-form-field>
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width" id="desc">
+              <mat-label>Product Description</mat-label>
+              <input matInput placeholder="Description" value="">
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width" id="price">
+              <mat-label>Product Price</mat-label>
+              <input matInput placeholder="price" value="">
+            </mat-form-field>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <mat-form-field class="example-full-width" id="count">
+              <mat-label>Amount</mat-label>
+              <input matInput type="number" placeholder="number" value="">
+            </mat-form-field>
+          </td>
+        </tr>
+        <!-- <tr>
+          <td>
+            <mat-form-field class="example-full-width" id="count">
+              <mat-label>Amount</mat-label>
+              <input mdInput placeholder="count"  type="number" value="">
+            </mat-form-field>
+          </td>
+        </tr> -->
+      
+      </table>
       </form>
     </mat-card-content>
     <mat-card-actions class="buttons">

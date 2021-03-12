@@ -14,13 +14,17 @@ mat-card {
     width: 300px;
   }
 
+  .example-form-field {
+    width: 200px;
+  }  
+
 #login-button{
 background-color: cornflowerblue;
 color: black;
 }
 
 .buttons{
-    margin-top: 200px;
+    margin-top: 10px;
 }
 
 mat-card-title{
@@ -30,4 +34,14 @@ mat-card-title{
 
 mat-card-header{
     margin-bottom: 20px;
+}
+
+#desc{
+    width: 500px;
+}
+#imgurl{
+    width: 400px;
+}
+#count{
+    width: 100px;
 }
