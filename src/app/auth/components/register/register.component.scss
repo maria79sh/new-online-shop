@@ -6,7 +6,7 @@ mat-card {
     max-width: 400px;
     margin: 2em auto;
     text-align: center;
-    height: 300px;
+    height: 320px;
   }
   
   mat-form-field {
@@ -19,9 +19,9 @@ background-color: cornflowerblue;
 color: black;
 }
 
-.buttons{
-    margin-top: 50px;
-}
+// .buttons{
+//     margin-top: 50px;
+// }
 
 mat-card-title{
     color: midnightblue;
@@ -29,5 +29,5 @@ mat-card-title{
 }
 
 mat-card-header{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }

@@ -45,6 +45,10 @@
    </mat-card-content>
    <mat-card-actions class="buttons">
      <button mat-raised-button color="primary" type="submit" class="my-button">Register</button>
-     <button mat-raised-button color="primary" id="login-button" (click)="goToLogin()">Log in</button>
+     <!-- <button mat-raised-button color="primary" id="login-button" (click)="goToLogin()">Log in</button> -->
+   </mat-card-actions>
+   <mat-card-actions>
+    <button mat-button id="login-button" (click)="goToLogin()" >Already have an account? Log In!</button>
+
    </mat-card-actions>
  </mat-card>

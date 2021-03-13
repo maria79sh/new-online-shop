@@ -74,4 +74,8 @@ export class ProductListComponent implements OnInit {
       this.products = res
     })
   }
+
+  onDelete(){
+    // this.storeService.
+  }
 }

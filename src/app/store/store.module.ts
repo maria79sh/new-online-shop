@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreService } from './services/store.service';
 import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
+import { LayoutModule } from '../layout/layout.module';
+import { LayoutComponent } from '../layout/components/layout/layout.component';
+import { CarouselComponent } from '../layout/components/carousel/carousel.component';
 
 
 const matModules = [

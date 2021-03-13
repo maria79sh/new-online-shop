@@ -12,4 +12,9 @@ export class HeaderComponent {
 
   ngOnInit(): void {
   }
+
+  goToCart(){
+    // this.router.navigate(['/auth/login']);
+
+  }
 }

@@ -3,6 +3,7 @@ import { StoreRoutingComponent } from './components/store-routing/store-routing.
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { CartComponent } from '../shopping-cart/components/cart/cart.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
       {
         path: 'product-detail',
         component: ProductDetailComponent,
+      },
+      {
+        path: 'cart',
+        component: CartComponent,
       },
     ],
   },
