@@ -8,7 +8,7 @@ import { StoreService } from '../../services/store.service';
   styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements OnInit {
-  products: any;
+  products: Array<Product> = [];
   // products: Product[] = [
   //   new Product(
   //     'Laptop',
@@ -69,13 +69,15 @@ export class ProductListComponent implements OnInit {
   constructor(private storeService:StoreService) {}
 
   ngOnInit() {
-    this.storeService.getGoods().subscribe((res)=>{
+    this.storeService.getGoods().subscribe((res:any)=>{
       console.log(res);
-      this.products = res
+      this.products = res;
     })
   }
 
-  onDelete(){
+  onDelete(id:any){
+    console.log(id);
+    
     // this.storeService.
   }
 }

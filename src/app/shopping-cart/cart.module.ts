@@ -23,6 +23,7 @@ const matModules =[
 
   imports: [
     ...matModules,
+    MatCardModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
