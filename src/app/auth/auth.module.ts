@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './services/auth.service';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 const matModules =[ 
   MatCardModule,
@@ -19,6 +20,7 @@ const matModules =[
   MatInputModule,
   MatToolbarModule,
   MatButtonModule,
+  MatSnackBarModule
 ]
 @NgModule({
   declarations: [AuthRoutingComponent, RegisterComponent, LoginComponent],
@@ -30,7 +32,6 @@ const matModules =[
     ReactiveFormsModule,
     AuthRoutingModule,
     HttpClientModule
-    
   ],
   providers: [AuthService]
 })

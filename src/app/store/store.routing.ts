@@ -10,7 +10,7 @@ const routes: Routes = [
     path: '',
     component: StoreRoutingComponent,
     children: [
-      { path: '', redirectTo: 'product-list', pathMatch: 'full' },
+      { path: '', redirectTo: '/store/product-list', pathMatch: 'full' },
       {
         path: 'product-list',
         component: ProductListComponent,
@@ -20,8 +20,9 @@ const routes: Routes = [
         component: ProductDetailComponent,
       },
       {
-        path: 'cart',
-        component: CartComponent,
+        path: 'shopping',
+        loadChildren: () =>
+          import('../shopping-cart/cart.module').then((m) => m.CartModule),
       },
     ],
   },
