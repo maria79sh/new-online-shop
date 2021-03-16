@@ -22,14 +22,19 @@ export class StoreService {
 
   putGoods(name : string, imageUrl : string, description : string,
     price : number, count : number){
+      const headers = {
+        "Content-Type": "application/json",
+        Authorization: 'Bearer ' + localStorage.getItem('token'),
+        'My-Custom-Header': 'foobar',
+      };
           // console.log(name,imageUrl,description,price,count);
-         return this.http.put(environment.baseUrl +'goods', {
+         return this.http.post(environment.baseUrl +'goods', {
             name : name,
             imageUrl : imageUrl,
             description : description,
             price : price,
             count : count
-          })
+          },{headers})
 
   }
 
