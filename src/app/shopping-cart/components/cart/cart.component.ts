@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Product } from 'src/app/store/models/product';
+import { CartService } from '../../services/cart.service';
+
 
 @Component({
   selector: 'app-cart',
@@ -7,9 +10,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
-  constructor(private router : Router) {}
 
-  ngOnInit() {}
+  constructor(private cartService : CartService) {}
 
-  
+
+  ngOnInit() {
+    // this.cartService.getItem().subscribe((res : any)=>{
+    //   console.log(res);
+    // })
+  }
 }

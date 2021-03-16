@@ -10,6 +10,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CartRoutingComponent } from './components/cart-routing/cart-routing.component';
 import { CartRoutingModule } from './cart.routing';
 import { CartComponent } from './components/cart/cart.component';
+import { AuthService } from '../auth/services/auth.service';
+import { CartService } from './services/cart.service';
+import { StoreService } from '../store/services/store.service';
 
 const matModules =[ 
   MatCardModule,
@@ -24,12 +27,13 @@ const matModules =[
   imports: [
     ...matModules,
     CommonModule,
+    MatCardModule,
     FormsModule,
     ReactiveFormsModule,
     CartRoutingModule,
     HttpClientModule
     
   ],
-//   providers: [AuthService]
+  providers: [CartService,StoreService]
 })
 export class CartModule {}

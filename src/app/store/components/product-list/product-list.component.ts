@@ -1,6 +1,7 @@
 import { Product } from './../../models/product';
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from '../../services/store.service';
+import { CartService } from 'src/app/shopping-cart/services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -8,7 +9,7 @@ import { StoreService } from '../../services/store.service';
   styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements OnInit {
-  products: any;
+  products: Array<Product> = [];
   // products: Product[] = [
   //   new Product(
   //     'Laptop',
@@ -66,16 +67,22 @@ export class ProductListComponent implements OnInit {
   //   ),
   // ];
 
-  constructor(private storeService:StoreService) {}
+  constructor(private storeService:StoreService,private cartService : CartService) {}
 
   ngOnInit() {
-    this.storeService.getGoods().subscribe((res)=>{
+    this.storeService.getGoods().subscribe((res : any)=>{
       console.log(res);
-      this.products = res
+      this.products = res;
     })
   }
 
-  onDelete(){
-    // this.storeService.
+  onDelete(id : any){
+    console.log(id);
+    this.storeService.deleteGoods(id);
+  }
+
+  onAddToCart(id : any){
+    console.log(id);
+    this.storeService.addToList(id);
   }
 }

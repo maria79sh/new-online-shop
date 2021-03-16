@@ -1,27 +1,30 @@
 import { LayoutComponent } from './components/layout/layout.component';
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from '../auth.gaurd';
 
 const routes: Routes = [
   {
-    path: "",
+    path: '',
     component: LayoutComponent,
     children: [
-      // { path: "", redirectTo: "/store", pathMatch: "full" },
+      { path: '', redirectTo: '/store', pathMatch: 'full' },
       {
-        path: "store",
+        path: 'store',
         loadChildren: () =>
-          import("../store/store.module").then((m) => m.StoreModule),
+          import('../store/store.module').then((m) => m.StoreModule),
+        canActivate: [AuthGuard],
       },
       {
-        path: "auth",
+        path: 'auth',
         loadChildren: () =>
-          import("../auth/auth.module").then((m) => m.AuthModule),
+          import('../auth/auth.module').then((m) => m.AuthModule),
       },
       {
-        path: "products",
+        path: 'products',
         loadChildren: () =>
-          import("../store/store.module").then((m) => m.StoreModule),
+          import('../store/store.module').then((m) => m.StoreModule),
+        canActivate: [AuthGuard],
       },
     ],
   },

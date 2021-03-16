@@ -4,64 +4,74 @@
       <mat-card-subtitle>Edit Entries</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <form class="example-form">
+      <form class="example-form" (ngSubmit)="onSubmit()" [formGroup]="form">
         <table class="example-full-width" cellspacing="0">
           <tr>
             <td>
               <mat-form-field class="example-full-width" appearance="fill">
                 <mat-label>Enter Product Name</mat-label>
-                <input matInput placeholder="product name" required>
+                <input matInput 
+                placeholder="product name" 
+                required 
+                formControlName="name">
               </mat-form-field>
             </td>
           </tr>
 
           <tr>
           <td>
-            <mat-form-field class="example-full-width" id="imgurl">
+            <mat-form-field class="example-full-width" id="imgurl" appearance = "fill">
               <mat-label>Product Image</mat-label>
-              <input matInput placeholder="Image Url" value="">
+              <input matInput 
+              placeholder="Image Url" 
+              required 
+              formControlName="imageUrl">
             </mat-form-field>
           </td>
         </tr>
       
         <tr>
           <td>
-            <mat-form-field class="example-full-width" id="desc">
+            <mat-form-field class="example-full-width" id="desc" appearance = "fill">
               <mat-label>Product Description</mat-label>
-              <input matInput placeholder="Description" value="">
+              <input matInput 
+              placeholder="Description" 
+              required 
+              formControlName="description">
             </mat-form-field>
           </td>
         </tr>
         <tr>
           <td>
-            <mat-form-field class="example-full-width" id="price">
+            <mat-form-field class="example-full-width" id="price" appearance = "fill">
               <mat-label>Product Price</mat-label>
-              <input matInput placeholder="price" value="">
+              <input matInput 
+              placeholder="price"
+               required
+                formControlName="price">
             </mat-form-field>
           </td>
         </tr>
 
         <tr>
           <td>
-            <mat-form-field class="example-full-width" id="count">
+            <mat-form-field class="example-full-width" id="count" appearance = "fill">
               <mat-label>Amount</mat-label>
-              <input matInput type="number" placeholder="number" value="">
+              <input matInput type="number"
+               placeholder="number"
+                value=""
+                 required
+                  formControlName="count">
             </mat-form-field>
           </td>
         </tr>
-        <!-- <tr>
-          <td>
-            <mat-form-field class="example-full-width" id="count">
-              <mat-label>Amount</mat-label>
-              <input mdInput placeholder="count"  type="number" value="">
-            </mat-form-field>
-          </td>
-        </tr> -->
       
       </table>
+
+      <mat-card-actions class="buttons">
+        <button mat-raised-button color="primary" type="submit" class="my-button">Submit</button>
+      </mat-card-actions>
       </form>
     </mat-card-content>
-    <mat-card-actions class="buttons">
-      <button mat-raised-button color="primary" type="submit" class="my-button">Submit</button>
-    </mat-card-actions>
+    
   </mat-card>

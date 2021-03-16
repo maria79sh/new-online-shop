@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +10,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private router : Router) {}
+
+  form: FormGroup = this.fb.group({
+    UserName: [''],
+    Password: [''],
+  });
+  constructor(private router : Router,
+    private fb: FormBuilder,
+    private authService: AuthService,
+    private _snackBar : MatSnackBar
+    )
+  {}
 
   ngOnInit() {}
 
@@ -15,4 +28,22 @@ export class LoginComponent implements OnInit {
     this.router.navigate(['/auth/register']);
   }
   
+  submit() {
+    this.authService
+      .loginUser(
+        this.form.get('UserName')?.value,
+        this.form.get('Password')?.value
+      )
+      .subscribe(
+        (res: any) => {
+          localStorage.setItem('token', res.token);
+          this.router.navigate(['/store/product-list']);
+        },
+        (err) => {
+          this._snackBar.open(err.error.error, 'danger', {
+            duration: 2000,
+          });
+        }
+      );
+  }
 }

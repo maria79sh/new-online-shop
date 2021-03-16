@@ -18,6 +18,8 @@ import {MatMenuModule} from '@angular/material/menu';
 import { LayoutModule } from '../layout/layout.module';
 import { LayoutComponent } from '../layout/components/layout/layout.component';
 import { CarouselComponent } from '../layout/components/carousel/carousel.component';
+import { CartService } from '../shopping-cart/services/cart.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 const matModules = [
@@ -28,7 +30,7 @@ const matModules = [
   MatButtonModule,
   MatDividerModule,
   MatIconModule,
-  MatMenuModule
+  MatMenuModule,
 ];
 @NgModule({
   declarations: [
@@ -38,8 +40,14 @@ const matModules = [
     StoreRoutingComponent,
   ],
 
-  imports: [...matModules, CommonModule, StoreRoutingModule, HttpClientModule],
-  providers: [StoreService],
+  imports: [...matModules, 
+    CommonModule, 
+    StoreRoutingModule, 
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
+  providers: [StoreService, CartService],
 
 })
 export class StoreModule {}
