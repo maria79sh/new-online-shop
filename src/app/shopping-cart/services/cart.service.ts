@@ -5,9 +5,19 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class CartService {
+
+  ID : any;
+  list: Array<{ID: any}> = []; 
+
   constructor(private http: HttpClient) {}
+  
 
   getItem(id : any){
-     return this.http.get(environment.baseUrl + 'goods' + '/'+ id);
+    this.list.push(this.ID);
+    const headers = {
+      'content-type': 'application/json',
+      Authorization: 'Bearer' + localStorage.getItem('token'),
+    };
+     return this.http.get(environment.baseUrl + 'goods' + '/'+ id , {headers});
 }
 }

@@ -1,7 +1,6 @@
 import { Product } from './../../models/product';
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from '../../services/store.service';
-import { CartService } from 'src/app/shopping-cart/services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -69,7 +68,6 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private storeService: StoreService,
-    private cartService: CartService
   ) {}
 
   ngOnInit() {
@@ -88,4 +86,5 @@ export class ProductListComponent implements OnInit {
     console.log(id);
     this.storeService.addToList(id);
   }
+
 }

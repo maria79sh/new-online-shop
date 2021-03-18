@@ -11,12 +11,16 @@ import { CartService } from '../../services/cart.service';
 })
 export class CartComponent implements OnInit {
 
+  items: Array<Product> = [];
+
+
   constructor(private cartService : CartService) {}
 
 
   ngOnInit() {
-    // this.cartService.getItem().subscribe((res : any)=>{
-    //   console.log(res);
-    // })
+    this.cartService.getItem(this.cartService.list).subscribe((res: any) => {
+      console.log(res);
+      this.items = res;
+    });
   }
 }
