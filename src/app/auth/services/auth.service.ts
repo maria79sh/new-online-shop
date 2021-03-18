@@ -8,27 +8,26 @@ export class AuthService {
 
   constructor(private http: HttpClient) {}
 
-  authenticated(){
-      this.isAuthenticated = !this.isAuthenticated;
+  authenticated() {
+    this.isAuthenticated = !this.isAuthenticated;
   }
 
-  registerUser(phone: String, password: string){
-      return this.http
-      .post(environment.baseUrl + 'auth/signup', {
-          userName: phone,
-          password: password,
-      });
-      // .pipe(
-      //   catchError((error) => {
-      //     error.sub          
-      //   })
-      // );
+  registerUser(phone: String, password: string) {
+    return this.http.post(environment.baseUrl + 'auth/signup', {
+      userName: phone,
+      password: password,
+    });
+    // .pipe(
+    //   catchError((error) => {
+    //     error.sub
+    //   })
+    // );
   }
 
-  loginUser(phone: string, password: string){
+  loginUser(phone: string, password: string) {
     return this.http.post(environment.baseUrl + 'auth/login', {
-        userName: phone,
-        password: password,
-      });
+      userName: phone,
+      password: password,
+    });
   }
 }

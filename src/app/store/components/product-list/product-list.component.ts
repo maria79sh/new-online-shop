@@ -67,21 +67,24 @@ export class ProductListComponent implements OnInit {
   //   ),
   // ];
 
-  constructor(private storeService:StoreService,private cartService : CartService) {}
+  constructor(
+    private storeService: StoreService,
+    private cartService: CartService
+  ) {}
 
   ngOnInit() {
-    this.storeService.getGoods().subscribe((res : any)=>{
+    this.storeService.getGoods().subscribe((res: any) => {
       console.log(res);
       this.products = res;
-    })
+    });
   }
 
-  onDelete(id : any){
+  onDelete(id: any) {
     console.log(id);
     this.storeService.deleteGoods(id);
   }
 
-  onAddToCart(id : any){
+  onAddToCart(id: any) {
     console.log(id);
     this.storeService.addToList(id);
   }

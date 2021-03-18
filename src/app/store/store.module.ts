@@ -17,9 +17,9 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { LayoutModule } from '../layout/layout.module';
 import { LayoutComponent } from '../layout/components/layout/layout.component';
-import { CarouselComponent } from '../layout/components/carousel/carousel.component';
 import { CartService } from '../shopping-cart/services/cart.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 
 const matModules = [
@@ -46,6 +46,7 @@ const matModules = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    IvyCarouselModule
   ],
   providers: [StoreService, CartService],
 

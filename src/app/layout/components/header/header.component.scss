@@ -24,7 +24,7 @@
     text-align: right;
 }
  #cart{
-     color : crimson;
+    color : crimson;
     //  padding-left: 260px; 
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bold;
@@ -36,3 +36,8 @@
  #store-icon{
      size: 10px;
  }
+
+ .example-spacer {
+    flex: 1 1 auto;
+  }
+  

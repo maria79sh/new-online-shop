@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/store/product-list']);
         },
         (err) => {
-          this._snackBar.open(err.error.error, 'danger', {
+          this._snackBar.open(err.error.error, 'close', {
             duration: 2000,
           });
         }

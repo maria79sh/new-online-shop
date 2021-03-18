@@ -1,4 +1,4 @@
-<div 
+<!-- <div 
 id="carousel-example-1z" 
 class="carousel slide carousel-fade"
  data-ride="carousel">
@@ -50,52 +50,96 @@ class="carousel slide carousel-fade"
     <span class="sr-only">Next</span>
   </a>
 
-</div>
+</div> -->
 
+<carousel class="my-carousel">
+  <div class="carousel-cell">
+    <img
+      src="https://cdn3.3dlibrary.fr/2610-thickbox_default/camera-canon-v2.jpg"
+    />
+  </div>
+  <div class="carousel-cell">
+    <img
+      src="https://www.sony.com/image/a9bd3d4cc0dac35199d6d92078bfe331?fmt=pjpeg&bgcolor=FFFFFF&bgc=FFFFFF&wid=2515&hei=1320"
+    />
+  </div>
+  <div class="carousel-cell">
+    <img
+      src="https://www.twinschip.com/image/cache/catalog/Products%20Twins%20Chip%20Store%202020/DEVELOPER%20BOARDS/Arduino/Arduino%20Mega%202560%20R3%20-%20Original%20Made%20in%20Italy/Arduino%20Mega%202560%20R3%20-%20Original%20Made%20in%20Italy%20Twins%20Chip%202.1-550x550.jpg"
+    />
+  </div>
+  <div class="carousel-cell">
+    <img
+      src="https://www.arduino.cc/en/uploads/Main/ArduinoDiecimila-240.jpg"
+    />
+  </div>
+  <div class="carousel-cell">
+    <img
+      src="https://spy.com/wp-content/uploads/2020/09/best-cheap-laptops.jpg?w=958&h=599&crop=1"
+    />
+  </div>
+  <div class="carousel-cell">
+    <img
+      src="https://i.pcmag.com/imagery/reviews/02pPlSC851BxRP4BFdufSBJ-1.1605566017.fit_lpad.size_625x365.jpg"
+    />
+  </div>
+  <div class="carousel-cell">
+    <img
+      src="https://images-na.ssl-images-amazon.com/images/I/71yXShgxvpL._SX425_.jpg"
+    />
+  </div>
+  <div class="carousel-cell">
+    <img
+      class="my-img"
+      src="https://www.review-hub.co.uk/wp-content/uploads/2019/05/Xiaomi-Redmi-7.jpg.webp"
+    />
+  </div>
+</carousel>
 
 <mat-divider class="w-100"></mat-divider>
 <mat-card class="my-card">
   <div class="row" id="div1">
-      <div
-        href="#"
-        class="list-group-item clearfix"
-        *ngFor="let product of products">
+    <div
+      href="#"
+      class="list-group-item clearfix"
+      *ngFor="let product of products"
+    >
+      <mat-card class="products">
+        <mat-card-header>
+          <mat-card-title class="card-title"
+            ><i class="fa fa-tag" aria-hidden="true"></i>
+            {{ product.name }}
+          </mat-card-title>
 
-        <mat-card class="products">
-            <mat-card-header>
-                <mat-card-title class="card-title"><i class="fa fa-tag" 
-                  aria-hidden="true"></i>
-                     {{product.name}}
-                    </mat-card-title>
+          <mat-card-subtitle class="card-subtitle">
+            price : {{ product.price }}
+          </mat-card-subtitle>
 
-                     <mat-card-subtitle class="card-subtitle">
-                        price : {{product.price}} 
-                     </mat-card-subtitle>
+          <button mat-icon-button type="button" (click)="onDelete(product._id)">
+            <mat-icon color="accent">delete</mat-icon>
+          </button>
+        </mat-card-header>
 
-                     <button
-                      mat-icon-button
-                      type="button"
-                      (click)="onDelete(product._id)" >
-                      <mat-icon color="accent" >delete</mat-icon>
-                    </button>
-              </mat-card-header>
-
-              <h5 id="h5" >Info :{{product.description}}</h5>
+        <h5 id="h5">Info :{{ product.description }}</h5>
         <span class="pull-right">
           <img
-            src='{{product.imageUrl}}'
+            src="{{ product.imageUrl }}"
             alt="{{ product.name }}"
-            class="img-responsive">
+            class="img-responsive"
+          />
         </span>
         <mat-card-actions>
-            <button mat-raised-button color="accent" 
-            (click) = "onAddToCart(product._id)"
-            id="addButton">
-                <i class="fa fa-cart-plus" 
-                aria-hidden="true" ></i>
-                 Add To Cart
-                </button>
-          </mat-card-actions>
-        </mat-card>
-      </div>
+          <button
+            mat-raised-button
+            color="accent"
+            (click)="onAddToCart(product._id)"
+            id="addButton"
+          >
+            <i class="fa fa-cart-plus" aria-hidden="true"></i>
+            Add To Cart
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
+</mat-card>

@@ -1,10 +1,14 @@
 .my-card{
     margin-left: 30px; 
     margin-right: 30px;
+    position: absolute;
 }
 #div1{
-    padding-left: 60px; 
-    padding-right: 20px;
+    // padding-left: 60px; 
+    // padding-right: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    position: relative;
 }
 .products{
     background:white;
@@ -42,24 +46,29 @@ img{
     color: black;;
 }
 
-.img2{
-    width: 100%; 
-     height: 360px;
-}
-.carousel-item{
-    max-width: 660px;
-     height: 360px;
-}
-#carousel-example-1z{
-    padding-left: 250px;
-    padding-bottom: 30px;
+.carousel-card{
+    margin-top: 20px;
+    border: solid black;
 }
 
-.carousel-control-prev{
-padding-left: 500px;
-color: black;
-}
+// .img2{
+//     width: 100%; 
+//      height: 360px;
+// }
+// .carousel-item{
+//     max-width: 660px;
+//      height: 360px;
+// }
+// #carousel-example-1z{
+//     padding-left: 250px;
+//     padding-bottom: 30px;
+// }
 
-.carousel-control-next{
-    padding-right: 600px;;
-}
+// .carousel-control-prev{
+// padding-left: 500px;
+// color: black;
+// }
+
+// .carousel-control-next{
+//     padding-right: 600px;;
+// }

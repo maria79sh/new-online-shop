@@ -8,6 +8,6 @@ export class CartService {
   constructor(private http: HttpClient) {}
 
   getItem(id : any){
-     return this.http.get(environment.baseUrl + 'goods' + id);
+     return this.http.get(environment.baseUrl + 'goods' + '/'+ id);
 }
 }

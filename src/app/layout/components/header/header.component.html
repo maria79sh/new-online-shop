@@ -30,38 +30,37 @@
         </li>
       </ul>
   </nav> -->
-  <mat-toolbar>
-    <mat-icon id="store-icon">store</mat-icon>
-    <a id="a1" routerLink="/store/product-list"
-     class="navbar-brand">
-      My Shop</a>
+<mat-toolbar>
+  <mat-icon id="store-icon">store</mat-icon>
+  <a id="a1" routerLink="/store/product-list" class="navbar-brand"> My Shop</a>
 
-    <span class="example-spacer"></span>
+  <a class="nav-link" routerLink="/products/product-detail">
+    <mat-icon>shopping_basket</mat-icon>
+    <i id="a2" aria-hidden="true"></i> Products
+  </a>
 
-    <a class="nav-link" routerLink ="/products/product-detail">
-      <mat-icon>shopping_basket</mat-icon>
-      <i id="a2" aria-hidden="true"></i> Products </a>
-
-    <a class="nav-link" routerLink ="/auth"><i id="a2">
+  <a class="nav-link" routerLink="/auth"
+    ><i id="a2">
       <mat-icon>person</mat-icon>
-    </i> Log In</a>
+    </i>
+    Log In</a
+  >
 
-      <form class="form-inline" action="/action_page.php" id="search-form">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" id="search">
-      </form>
-      <button class="btn btn-outline-secondary" type="button">Search</button>
+  <form class="form-inline" action="/action_page.php" id="search-form">
+    <input
+      class="form-control mr-sm-2"
+      type="text"
+      placeholder="Search"
+      id="search"
+    />
+  </form>
+  <button class="btn btn-outline-secondary" type="button">Search</button>
 
-      <div class="pull-right">
-      <a class="nav-link " routerLink ="/store/shopping" id="cart">
-        <mat-icon>shopping_cart</mat-icon>
-        <i id="cart-button"></i> Shopping Cart </a>
-        </div>
+  <span class="example-spacer"></span>
 
-    <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button> 
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button> -->
-  </mat-toolbar>
-  
+  <a class="nav-link" routerLink="/store/shopping" id="cart">
+    <mat-icon>shopping_cart</mat-icon>
+    <i id="cart-button"></i> Shopping Cart
+  </a>
+
+</mat-toolbar>
