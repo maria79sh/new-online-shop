@@ -25,7 +25,7 @@ export class StoreService {
   ) {
     const headers = {
       'content-type': 'application/json',
-      Authorization: 'Bearer' + localStorage.getItem('token'),
+      Authorization: 'Bearer ' + localStorage.getItem('token'),
       'My-Custom-Header': 'foobar',
     };
 
